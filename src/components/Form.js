@@ -1,6 +1,6 @@
 import React from 'react';
 import "./styles/ReservationsContent.css";
-import {useForm} from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup"
 import * as yup from "yup";
 
@@ -35,12 +35,12 @@ function Form() {
                 </div>
                 <div className="field">
                     <label htmlFor="email">Email</label>
-                    <input type="text" placeholder="text@email.com" name="email" {...register("email")}/>
+                    <input type="text" placeholder="text@email.com" name="email" {...register("email")} />
                     <span className="error-message">{errors.email?.message}</span>
                 </div>
                 <div className="field">
                     <label htmlFor="telephone">Telephone</label>
-                    <input type="tel" placeholder="233 00 000 0000" name="telephone" {...register("telephone")}/>
+                    <input type="tel" placeholder="233 00 000 0000" name="telephone" {...register("telephone")} />
                     <span className="error-message">{errors.telephone?.message}</span>
                 </div>
 
@@ -58,11 +58,9 @@ function Form() {
                 </div>
                 <div className="field guest">
                     <label htmlFor="guests">Guests</label>
-                    <input type="number" placeholder="2" name="guests" {...register("guests")}/> 
+                    <input type="number" placeholder="2" name="guests" {...register("guests")} />
                     <span className="error-message">{errors.guests?.message}</span>
                 </div>
-                {/*</div>*/}
-                        
                 <div className="field">
                     <label htmlFor="date">Date & Time</label>
                     <input type="datetime-local" name="date" {...register("date")} />
@@ -71,7 +69,7 @@ function Form() {
                 <button className="reserve-btn" type="submit">Reserve</button>
             </fieldset>
         </form>
-  )
+    )
 }
 
 export default Form
